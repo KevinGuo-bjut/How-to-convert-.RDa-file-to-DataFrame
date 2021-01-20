@@ -1,0 +1,5 @@
+#pip install pyreadr
+import pyreadr
+result = pyreadr.read_r('material_basic_db2_sql_20181107.rda')
+df = pd.concat(result, ignore_index = True)
+df.to_csv('df.csv')
